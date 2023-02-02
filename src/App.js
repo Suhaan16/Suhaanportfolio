@@ -1,23 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/NavBar/Navbar";
 
 function App() {
+  const [cursorX, setCursorX] = useState();
+  const [cursorY, setCursorY] = useState();
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    false
+  );
+
+  window.addEventListener("mousemove", (e) => {
+    setCursorX(e.clientX);
+    setCursorY(e.clientY);
+  });
+
+  let links = Array.from(document.querySelectorAll(".link"));
+  let cursor = document.querySelector(".cursor");
+
+  links.forEach((link) => {
+    link.addEventListener("mouseover", () => {
+      cursor.classList.add("grow");
+    });
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("grow");
+    });
+  });
+
+  const openOld = () => {
+    window.open(
+      "https://chethan30.github.io/my-portfolio.github.io/",
+      "_blank"
+    );
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="navbar">
+        <Navbar />
+      </div>
+      <div className="content">
+        <div className="welcome">
+          <h1 className="">We are Under Maintananace!</h1>
+        </div>
+        <h2 className="link" onClick={openOld}>
+          Check my previous version here!
+        </h2>
+      </div>
+      <div
+        className="cursor"
+        style={{
+          left: cursorX + "px",
+          top: cursorY + "px",
+        }}
+      ></div>
     </div>
   );
 }
