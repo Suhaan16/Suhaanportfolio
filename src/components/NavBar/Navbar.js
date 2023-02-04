@@ -9,10 +9,18 @@ export default function Navbar() {
         <img className="nav-logo" src={logoWhite} alt="logo-white" />
       </div>
       <div className="nav-links">
-        <div>About</div>
-        <div>Work</div>
-        <div>Servcies</div>
-        <div>Contact</div>
+        <a href="http://" rel="noopener noreferrer">
+          About
+        </a>
+        <a href="http://" rel="noopener noreferrer">
+          Work
+        </a>
+        <a href="http://" rel="noopener noreferrer">
+          Servcies
+        </a>
+        <a href="http://" rel="noopener noreferrer">
+          Contact
+        </a>
       </div>
     </div>
   );
