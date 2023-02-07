@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "./App.css";
+import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
 
 function App() {
   const [cursorX, setCursorX] = useState();
   const [cursorY, setCursorY] = useState();
+  const [underMain, setUnderMain] = useState(false);
 
   window.addEventListener(
     "scroll",
@@ -46,14 +48,18 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="content">
-        <div className="welcome">
-          <h1 className="">We are Under Maintananace!</h1>
+      {/* {underMain && (
+        <div className="content">
+          <div className="welcome">
+            <h1 className="">We are Under Maintananace!</h1>
+          </div>
+          <h2 className="link" onClick={openOld}>
+            Check my previous version here!
+          </h2>
         </div>
-        <h2 className="link" onClick={openOld}>
-          Check my previous version here!
-        </h2>
-      </div>
+      )} */}
+      <Intro />
+
       <div
         className="cursor"
         style={{
