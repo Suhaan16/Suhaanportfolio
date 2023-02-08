@@ -58,7 +58,9 @@ function App() {
           </h2>
         </div>
       )} */}
-      <Intro />
+      <div className="content2">
+        <Intro />
+      </div>
 
       <div
         className="cursor"
