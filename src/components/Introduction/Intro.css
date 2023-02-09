@@ -17,6 +17,19 @@
   text-overflow: clip;
 }
 
+.dark-text {
+  font-size: 1.2rem;
+  color: rgba(128, 128, 128, 0.244);
+}
+
+.light-text {
+  text-decoration: underline;
+}
+
+.light-text:hover {
+  color: white;
+}
+
 .intro-right-active {
   flex: 0.6;
   justify-self: flex-end;
@@ -25,8 +38,9 @@
   transition: cubic-bezier(0.01, 0.29, 0.75, 1.18) all 800ms;
 }
 
-.intro-right-active .intro-right-active > img {
+.intro-right-active > img {
   width: 95%;
+  /* TODO: Vary image size based on screen size */
   mix-blend-mode: normal;
   object-fit: contain;
   filter: brightness(0.83);

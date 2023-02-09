@@ -12,9 +12,9 @@ export default function Intro() {
     <section className="intro-container">
       <div className="intro-left">
         {!openSes && (
-          <p>
+          <p className="dark-text">
             Hey, Pss. Its dark. Why dont you turn on the{" "}
-            <strong className="link" onClick={openSesame}>
+            <strong className="light-text" onClick={openSesame}>
               light?
             </strong>
           </p>
