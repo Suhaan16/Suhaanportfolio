@@ -1,7 +1,7 @@
 .intro-container {
   color: white;
   /* border: 1px solid red; */
-  width: 100%;
+  /* width: 100%; */
   padding: 1rem 2rem;
   display: flex;
   gap: 2rem;
@@ -12,9 +12,13 @@
 }
 
 .intro-left {
-  flex: 0.4;
+  flex: 0.6;
   flex-wrap: wrap;
   text-overflow: clip;
+
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .dark-text {
@@ -31,7 +35,7 @@
 }
 
 .intro-right-active {
-  flex: 0.6;
+  flex: 0.4;
   justify-self: flex-end;
   align-self: flex-end;
   overflow: hidden;
@@ -39,7 +43,7 @@
 }
 
 .intro-right-active > img {
-  width: 95%;
+  width: 85%;
   /* TODO: Vary image size based on screen size */
   mix-blend-mode: normal;
   object-fit: contain;
@@ -84,3 +88,11 @@
   top: 10px;
   object-fit: contain;
 } */
+
+@media screen and (max-width: 768px) {
+  .intro-right-active,
+  .intro-right-hidden {
+    display: none;
+    visibility: none;
+  }
+}

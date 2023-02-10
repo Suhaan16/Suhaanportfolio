@@ -1,33 +1,34 @@
 import React, { useState } from "react";
+import secretAudio from "../../assets/secret_sound.mp3";
+import MyIntro from "./MyIntro";
 import "./Intro.css";
 
 export default function Intro() {
   const [openSes, setOpenSes] = useState(false);
 
   const openSesame = () => {
-    setOpenSes(!openSes);
+    setTimeout(() => {
+      setOpenSes(!openSes);
+    }, 500);
+    document.querySelector(".secret-audio").play();
   };
+
+  let beforeText = !openSes && (
+    <p className="dark-text">
+      Hey, Pss. Its dark. Why dont you turn on the{" "}
+      <strong className="light-text" onClick={openSesame}>
+        light?
+      </strong>
+    </p>
+  );
 
   return (
     <section className="intro-container">
+      <audio className="secret-audio" src={secretAudio} />
       <div className="intro-left">
-        {!openSes && (
-          <p className="dark-text">
-            Hey, Pss. Its dark. Why dont you turn on the{" "}
-            <strong className="light-text" onClick={openSesame}>
-              light?
-            </strong>
-          </p>
-        )}
-        {openSes && <p>Hello</p>}
+        {beforeText}
+        {openSes && <MyIntro />}
       </div>
-      {/* <div className="intro-middle">
-        <img
-          src="https://cdn3d.iconscout.com/3d/premium/thumb/light-bulb-5199556-4347716.png"
-          alt=""
-          srcset=""
-        />
-      </div> */}
       <div
         className={`${
           openSes ? "intro-right-active" : "intro-right-hidden"
@@ -36,6 +37,7 @@ export default function Intro() {
         <img
           src="https://d2pas86kykpvmq.cloudfront.net/images/humans-3.0/pose_46.png"
           alt=""
+          draggable={false}
         />
       </div>
     </section>

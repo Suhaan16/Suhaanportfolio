@@ -16,6 +16,7 @@
 .content2 {
   margin-top: 15vh;
   margin-bottom: 2rem;
+  width: 100%;
   /* border: 2px solid yellow; */
 }
 
@@ -84,4 +85,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+  .cursor {
+    display: none;
+    visibility: none;
+  }
 }

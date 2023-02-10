@@ -6,7 +6,12 @@ export default function Navbar() {
   return (
     <div className="nav-container">
       <div>
-        <img className="nav-logo link" src={logoWhite} alt="logo-white" />
+        <img
+          className="nav-logo link"
+          src={logoWhite}
+          alt="logo-white"
+          draggable={false}
+        />
       </div>
       <div className="nav-links">
         <a className="sec link" href="http://" rel="noopener noreferrer">

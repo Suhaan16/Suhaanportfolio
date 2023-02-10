@@ -36,11 +36,21 @@
   color: white;
   font-size: 1.3rem;
   cursor: none;
-
+  margin: 0 1rem;
   transition: ease-in-out 300ms;
 }
 
 .sec:hover {
   transform: scale(1.2);
   font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-container {
+    justify-content: center;
+  }
+  .nav-links {
+    display: none;
+    margin: 0;
+  }
 }
