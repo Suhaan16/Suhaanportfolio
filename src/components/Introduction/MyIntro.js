@@ -4,7 +4,9 @@ import "./MyIntro.css";
 function MyIntro() {
   return (
     <div className="myinrto-container">
-      <h1>Hello, My name is Chethan!</h1>
+      <h1 className="myintro-text">
+        👋🏼, I'm <span className="magic">Chethan</span>!
+      </h1>
     </div>
   );
 }
