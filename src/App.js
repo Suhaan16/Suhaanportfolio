@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Footer from "./components/Footer/Footer";
 import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
 
@@ -60,6 +61,9 @@ function App() {
       )} */}
       <div className="content2">
         <Intro />
+        <div className="footer-holder">
+          <Footer />
+        </div>
       </div>
 
       <div
