@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
 import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
@@ -61,6 +62,7 @@ function App() {
       )} */}
       <div className="content2">
         <Intro />
+        <Card />
         <div className="footer-holder">
           <Footer />
         </div>

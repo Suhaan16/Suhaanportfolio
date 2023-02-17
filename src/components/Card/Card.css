@@ -1,10 +1,4 @@
 .card-content {
-  background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
-  background-position: 0% 0%;
-  background-size: 5vmin 5vmin;
-
-  height: 100%;
-  width: 100%;
 }
 
 .card {
@@ -13,8 +7,9 @@
   /*   background: radial-gradient(
     rgba(255, 255, 255, 0.2) transparent 8%); */
   background-color: black;
+  border: 2px solid grey;
   /*   background-position */
-  width: 40vmin;
+  width: 5vmin;
   border: 2px solid grey;
 }
 
