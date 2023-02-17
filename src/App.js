@@ -38,12 +38,12 @@ function App() {
     });
   });
 
-  const openOld = () => {
-    window.open(
-      "https://chethan30.github.io/my-portfolio.github.io/",
-      "_blank"
-    );
-  };
+  // const openOld = () => {
+  //   window.open(
+  //     "https://chethan30.github.io/my-portfolio.github.io/",
+  //     "_blank"
+  //   );
+  // };
 
   return (
     <div className="App">

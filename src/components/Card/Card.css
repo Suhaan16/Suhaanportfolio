@@ -1,25 +1,36 @@
 .card-content {
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+  transition: background-position 300ms ease;
+}
+
+.card:hover > .card-content {
+  background-position: -20% -20%;
 }
 
 .card {
-  aspect-ratio: 1/1.6;
+  padding: 1rem;
+  overflow: hidden;
+  margin: 1rem 2rem;
+  aspect-ratio: 1/1.4;
   position: relative;
-  /*   background: radial-gradient(
-    rgba(255, 255, 255, 0.2) transparent 8%); */
-  background-color: black;
-  border: 2px solid grey;
-  /*   background-position */
-  width: 5vmin;
-  border: 2px solid grey;
+  width: 40vmin;
+  border: 2px solid rgba(128, 128, 128, 0.454);
+  border-radius: 8px;
 }
 
 .card:before {
   background: linear-gradient(
     130deg,
     transparent 0% 33%,
-    purple 66%,
-    red 83.5%,
-    yellow 100%
+    rgba(128, 0, 128, 1) 66%,
+    rgba(255, 0, 0, 1) 83.5%,
+    rgba(255, 255, 0, 1) 100%
   );
   background-position: 0% 0%;
   background-size: 300% 300%;
@@ -29,7 +40,8 @@
   top: 0px;
   height: 100%;
   width: 100%;
-  transition: background-position 300ms ease-in-out, transform 350ms;
+  border-radius: inherit;
+  transition: background-position 350ms ease-in-out, transform 350ms;
 }
 
 .card:hover:before {

@@ -95,7 +95,6 @@
 
 .footer-holder {
   /* justify-self: flex-end; */
-  position: absolute;
   width: 100%;
   bottom: 0;
 }
