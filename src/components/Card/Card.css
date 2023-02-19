@@ -14,12 +14,14 @@
 }
 
 .card {
+  display: inline-block;
   padding: 1rem;
   overflow: hidden;
   margin: 1rem 2rem;
-  aspect-ratio: 1/1.4;
+  aspect-ratio: 1/1.2;
   position: relative;
   width: 40vmin;
+  min-width: 40vmin;
   border: 2px solid rgba(128, 128, 128, 0.454);
   border-radius: 8px;
 }

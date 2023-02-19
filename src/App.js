@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
@@ -6,37 +6,46 @@ import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
 
 function App() {
-  const [cursorX, setCursorX] = useState();
-  const [cursorY, setCursorY] = useState();
-  const [underMain, setUnderMain] = useState(false);
+  useEffect(() => {
+    let links = Array.from(document.querySelectorAll(".link"));
+    let cursor = document.querySelector(".cursor");
+    let trailer = document.querySelector(".trailer");
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    console.log(cursor);
+
+    window.onmousemove = (event) => {
+      const x = event.clientX;
+      const y = event.clientY;
+
+      console.log();
+
+      cursor.animate(
+        {
+          top: `${y - cursor.clientWidth / 2}px`,
+          left: `${x - cursor.clientWidth / 2}px`,
+        },
+        { duration: 800, fill: "forwards" }
       );
-    },
-    false
-  );
+      trailer.animate(
+        {
+          top: `${y - trailer.clientWidth / 2}px`,
+          left: `${x - trailer.clientWidth / 2}px`,
+        },
+        { duration: 1600, fill: "forwards" }
+      );
+    };
 
-  window.addEventListener("mousemove", (e) => {
-    setCursorX(e.clientX);
-    setCursorY(e.clientY);
-  });
-
-  let links = Array.from(document.querySelectorAll(".link"));
-  let cursor = document.querySelector(".cursor");
-
-  links.forEach((link) => {
-    link.addEventListener("mouseover", () => {
-      cursor.classList.add("grow");
+    links.forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        cursor.classList.add("grow");
+        trailer.classList.add("growmore");
+      });
+      link.addEventListener("mouseleave", () => {
+        cursor.classList.remove("grow");
+        trailer.classList.remove("growmore");
+      });
     });
-    link.addEventListener("mouseleave", () => {
-      cursor.classList.remove("grow");
-    });
-  });
+  }, []);
 
   // const openOld = () => {
   //   window.open(
@@ -62,19 +71,22 @@ function App() {
       )} */}
       <div className="content2">
         <Intro />
-        <Card />
+        <div className="card-container">
+          <Card className="card-ele" />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+
         <div className="footer-holder">
           <Footer />
         </div>
       </div>
 
-      <div
-        className="cursor"
-        style={{
-          left: cursorX + "px",
-          top: cursorY + "px",
-        }}
-      ></div>
+      <div className="cursor"></div>
+      <div className="trailer"></div>
     </div>
   );
 }
