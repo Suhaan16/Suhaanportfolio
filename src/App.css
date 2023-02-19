@@ -26,14 +26,13 @@
 .cursor {
   width: 25px;
   height: 25px;
-  /* background-color: rgba(255, 253, 162, 0.9); */
   background-color: white;
 
   position: fixed;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0px 0px 150px 5px rgba(255, 253, 162, 0.8);
-  transition: background 200ms, width 300ms, height 300ms;
+  transition: background 200ms, width 400ms, height 400ms;
   opacity: 1;
   pointer-events: none;
 }
@@ -46,7 +45,7 @@
   border-radius: 50%;
   z-index: 1999;
   box-shadow: 0px 0px 150px 5px rgba(255, 253, 162, 0.8);
-  transition: width 300ms, height 300ms;
+  transition: width 400ms, height 400ms;
   opacity: 1;
   pointer-events: none;
 }
@@ -97,12 +96,34 @@
 }
 
 .growmore {
-  /* width: 52px;
-  height: 52px;
-  align-self: center;
-  justify-self: center;
-  border: 4px solid rgba(255, 253, 162, 0.9); */
   display: none;
+}
+
+.cursor-icon {
+  opacity: 0;
+}
+
+.point {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.point > .cursor-icon {
+  opacity: 1;
+  animation: spin 1.5s 1 forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .content {

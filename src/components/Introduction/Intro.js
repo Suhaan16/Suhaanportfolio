@@ -25,6 +25,7 @@ export default function Intro() {
   return (
     <section className="intro-container">
       <audio className="secret-audio" src={secretAudio} />
+
       <div className="intro-left">
         {beforeText}
         {openSes && <MyIntro />}

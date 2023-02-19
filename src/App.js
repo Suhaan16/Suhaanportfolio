@@ -4,15 +4,10 @@ import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
 import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
+import secretAudio from "./assets/secret_sound_2.mp3";
 
 function App() {
-  useEffect(() => {
-    let links = Array.from(document.querySelectorAll(".link"));
-    let cursor = document.querySelector(".cursor");
-    let trailer = document.querySelector(".trailer");
-
-    console.log(cursor);
-
+  const mouseFollower = (cursor, trailer) => {
     window.onmousemove = (event) => {
       const x = event.clientX;
       const y = event.clientY;
@@ -34,7 +29,9 @@ function App() {
         { duration: 1600, fill: "forwards" }
       );
     };
+  };
 
+  const mouseGlow = (links, cursor, trailer) => {
     links.forEach((link) => {
       link.addEventListener("mouseover", () => {
         cursor.classList.add("grow");
@@ -42,6 +39,36 @@ function App() {
       });
       link.addEventListener("mouseleave", () => {
         cursor.classList.remove("grow");
+        trailer.classList.remove("growmore");
+      });
+    });
+  };
+  useEffect(() => {
+    let links = Array.from(document.querySelectorAll(".link"));
+    let cursor = document.querySelector(".cursor");
+    let trailer = document.querySelector(".trailer");
+    let cards = document.querySelectorAll(".card");
+    let logo = document.querySelector(".nav-logo");
+
+    logo.addEventListener("mouseover", (e) => {
+      console.log("over and out!");
+      document.querySelector(".secret-audio2").play();
+    });
+    logo.addEventListener("mouseleave", (e) => {
+      console.log("over and out!");
+      document.querySelector(".secret-audio2").pause();
+    });
+
+    mouseFollower(cursor, trailer);
+    mouseGlow(links, cursor, trailer);
+
+    cards.forEach((card) => {
+      card.addEventListener("mouseover", () => {
+        cursor.classList.add("point");
+        trailer.classList.add("growmore");
+      });
+      card.addEventListener("mouseleave", () => {
+        cursor.classList.remove("point");
         trailer.classList.remove("growmore");
       });
     });
@@ -56,9 +83,11 @@ function App() {
 
   return (
     <div className="App">
+      <audio className="secret-audio2 growmore" src={secretAudio} />
       <div className="navbar">
         <Navbar />
       </div>
+
       {/* {underMain && (
         <div className="content">
           <div className="welcome">
@@ -73,10 +102,10 @@ function App() {
         <Intro />
         <div className="card-container">
           <Card className="card-ele" />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <Card className="card-ele" />
+          <Card className="card-ele" />
+          <Card className="card-ele" />
+          <Card className="card-ele" />
           <Card />
         </div>
 
@@ -85,7 +114,9 @@ function App() {
         </div>
       </div>
 
-      <div className="cursor"></div>
+      <div className="cursor">
+        <i className="cursor-icon">🚀</i>
+      </div>
       <div className="trailer"></div>
     </div>
   );
