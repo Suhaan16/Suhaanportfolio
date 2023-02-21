@@ -103,10 +103,6 @@ function App() {
         <div className="card-container">
           <Card className="card-ele" />
           <Card className="card-ele" />
-          <Card className="card-ele" />
-          <Card className="card-ele" />
-          <Card className="card-ele" />
-          <Card />
         </div>
 
         <div className="footer-holder">
