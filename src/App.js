@@ -101,8 +101,12 @@ function App() {
       <div className="content2">
         <Intro />
         <div className="card-container">
-          <Card className="card-ele" />
-          <Card className="card-ele" />
+          <div className="card-grid">
+            <Card className="card-ele" />
+            <Card className="card-ele" />
+            <Card className="card-ele" />
+            <Card className="card-ele" />
+          </div>
         </div>
 
         <div className="footer-holder">

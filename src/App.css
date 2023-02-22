@@ -23,6 +23,17 @@
   /* border: 2px solid yellow; */
 }
 
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-grid {
+  display: inline grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .cursor {
   width: 25px;
   height: 25px;
