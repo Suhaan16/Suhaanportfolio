@@ -12,6 +12,7 @@ export default function Card() {
           <div className="tech">Tech</div>
           <div className="tech">Tech</div>
           <div className="tech">Tech</div>
+          <div className="tech">Tech</div>
         </div>
       </div>
     </div>
