@@ -99,16 +99,21 @@ function App() {
         </div>
       )} */}
       <div className="content2">
+        {/* <---------- Introduction -----------> */}
         <Intro />
+
+        {/* <---------- Projects -----------> */}
         <div className="card-container">
+          <div className="heading">Projects</div>
           <div className="card-grid">
-            <Card className="card-ele" />
-            <Card className="card-ele" />
-            <Card className="card-ele" />
             <Card className="card-ele" />
           </div>
         </div>
+        {/* <---------- Services/ Skills -----------> */}
 
+        {/* <---------- Aboutme and Resume -----------> */}
+
+        {/* <---------- Footer -----------> */}
         <div className="footer-holder">
           <Footer />
         </div>
