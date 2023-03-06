@@ -3,8 +3,8 @@ import secretAudio from "../../assets/secret_sound.mp3";
 import MyIntro from "./MyIntro";
 import "./Intro.css";
 
-export default function Intro() {
-  const [openSes, setOpenSes] = useState(false);
+export default function Intro({ openSes, setOpenSes }) {
+  // const [openSes, setOpenSes] = useState(false);
 
   const openSesame = () => {
     setTimeout(() => {

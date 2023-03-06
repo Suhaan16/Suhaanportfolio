@@ -52,6 +52,7 @@
 }
 
 .intro-right-hidden {
+  flex: 0.4;
   visibility: hidden;
   opacity: 0;
   transform: translateX(300px);
@@ -94,5 +95,9 @@
   .intro-right-hidden {
     display: none;
     visibility: none;
+  }
+
+  .myintro-text {
+    justify-content: center;
   }
 }

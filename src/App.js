@@ -7,6 +7,8 @@ import Navbar from "./components/NavBar/Navbar";
 import secretAudio from "./assets/secret_sound_2.mp3";
 
 function App() {
+  const [openSes, setOpenSes] = useState(false);
+
   const mouseFollower = (cursor, trailer) => {
     window.onmousemove = (event) => {
       const x = event.clientX;
@@ -72,7 +74,7 @@ function App() {
         trailer.classList.remove("growmore");
       });
     });
-  }, []);
+  }, [openSes]);
 
   // const openOld = () => {
   //   window.open(
@@ -100,23 +102,34 @@ function App() {
       )} */}
       <div className="content2">
         {/* <---------- Introduction -----------> */}
-        <Intro />
+        <Intro openSes={openSes} setOpenSes={setOpenSes} />
 
         {/* <---------- Projects -----------> */}
-        <div className="card-container">
-          <div className="heading">Projects</div>
-          <div className="card-grid">
-            <Card className="card-ele" />
+        {openSes && (
+          <div className="card-container">
+            <div className="heading">Projects</div>
+            <div className="card-grid">
+              <Card className="card-ele" />
+            </div>
           </div>
-        </div>
+        )}
+
         {/* <---------- Services/ Skills -----------> */}
+        {openSes && (
+          <div className="skills-container">
+            <div className="heading">Skills</div>
+            <div className="skills-grid"></div>
+          </div>
+        )}
 
         {/* <---------- Aboutme and Resume -----------> */}
 
         {/* <---------- Footer -----------> */}
-        <div className="footer-holder">
-          <Footer />
-        </div>
+        {openSes && (
+          <div className="footer-holder">
+            <Footer />
+          </div>
+        )}
       </div>
 
       <div className="cursor">
