@@ -6,7 +6,7 @@
   width: 80%;
   z-index: 5;
   position: absolute;
-  padding: 1rem 2rem;
+  padding: 1rem 0.5rem;
   transition: background-position 300ms ease;
   overflow: hidden;
 }
@@ -21,8 +21,11 @@
   overflow: hidden;
   /* margin: 1rem 2rem; */
   position: relative;
-  width: 70vmin;
-  height: 50vmin;
+  /* width: 30vmin; */
+  min-width: 100px;
+  /* min-width: 350px; */
+  /* height: 35vmin; */
+  aspect-ratio: 1/1.2;
   border: 2px solid rgba(128, 128, 128, 0.454);
   border-radius: 8px;
 }
@@ -52,6 +55,10 @@
   transform: scale(1.02, 1.01);
 }
 
+.projName {
+  font-size: clamp(1rem, 1.2vw, 3rem);
+}
+
 .tech-used {
   /* border: 1px solid red; */
   width: 100%;
@@ -67,4 +74,14 @@
   border-radius: 5px;
   width: fit-content;
   padding: 10px 10px;
+}
+
+.tech-heading {
+  font-size: clamp(0.5rem, 0.5vw, 1rem);
+}
+
+.proj-desc {
+  border: 2px solid red;
+  object-fit: contain;
+  word-wrap: normal;
 }

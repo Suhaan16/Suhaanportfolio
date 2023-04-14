@@ -5,7 +5,7 @@ function MyIntro() {
   return (
     <div className="myinrto-container">
       <h1 className="myintro-text">
-        👋🏼, I'm <span className="magic">Chethan</span>!
+        Hey, I'm <span className="magic">Chethan</span>!
       </h1>
     </div>
   );

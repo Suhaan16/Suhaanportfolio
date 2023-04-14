@@ -83,42 +83,53 @@ function App() {
 
   return (
     <div className="App">
-      <audio className="secret-audio2 growmore" src={secretAudio} />
       <div className="navbar">
         <Navbar />
       </div>
+      <div className="appContainer">
+        <audio className="secret-audio2 growmore" src={secretAudio} />
 
-      <div className="content2">
-        {/* <---------- Introduction -----------> */}
-        <Intro />
+        <div className="content2">
+          {/* <---------- Introduction -----------> */}
+          <Intro />
 
-        {/* <---------- Projects -----------> */}
+          {/* <---------- Projects -----------> */}
 
-        <div className="card-container">
-          <div className="heading">Projects</div>
-          <div className="card-grid">
-            <Card className="card-ele" />
+          <div className="card-container">
+            <div className="heading-holder">
+              <div className="heading">Projects</div>
+              <button className="see-more">See More</button>
+            </div>
+            <div className="card-grid">
+              <Card className="card-ele" />
+              <Card className="card-ele" />
+              <Card className="card-ele" />
+              <Card className="card-ele" />
+              <Card className="card-ele" />
+              <Card className="card-ele" />
+            </div>
           </div>
+
+          {/* <---------- Services/ Skills -----------> */}
+          <div className="skills-container">
+            <div className="heading-holder">
+              <div className="heading">Skills</div>
+            </div>
+            <div className="skills-grid"></div>
+          </div>
+
+          {/* <---------- Aboutme and Resume -----------> */}
         </div>
 
-        {/* <---------- Services/ Skills -----------> */}
-        <div className="skills-container">
-          <div className="heading">Skills</div>
-          <div className="skills-grid"></div>
+        <div className="cursor">
+          <i className="cursor-icon">🚀</i>
         </div>
-
-        {/* <---------- Aboutme and Resume -----------> */}
-
-        {/* <---------- Footer -----------> */}
-        <div className="footer-holder">
-          <Footer />
-        </div>
+        <div className="trailer"></div>
       </div>
-
-      <div className="cursor">
-        <i className="cursor-icon">🚀</i>
+      {/* <---------- Footer -----------> */}
+      <div className="footer-holder">
+        <Footer />
       </div>
-      <div className="trailer"></div>
     </div>
   );
 }
