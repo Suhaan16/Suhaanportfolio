@@ -81,7 +81,7 @@
 }
 
 .proj-desc {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   object-fit: contain;
   word-wrap: normal;
 }
