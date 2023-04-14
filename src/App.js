@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
@@ -7,8 +7,6 @@ import Navbar from "./components/NavBar/Navbar";
 import secretAudio from "./assets/secret_sound_2.mp3";
 
 function App() {
-  const [openSes, setOpenSes] = useState(false);
-
   const mouseFollower = (cursor, trailer) => {
     window.onmousemove = (event) => {
       const x = event.clientX;
@@ -74,7 +72,7 @@ function App() {
         trailer.classList.remove("growmore");
       });
     });
-  }, [openSes]);
+  }, []);
 
   // const openOld = () => {
   //   window.open(
@@ -90,46 +88,31 @@ function App() {
         <Navbar />
       </div>
 
-      {/* {underMain && (
-        <div className="content">
-          <div className="welcome">
-            <h1 className="">We are Under Maintananace!</h1>
-          </div>
-          <h2 className="link" onClick={openOld}>
-            Check my previous version here!
-          </h2>
-        </div>
-      )} */}
       <div className="content2">
         {/* <---------- Introduction -----------> */}
-        <Intro openSes={openSes} setOpenSes={setOpenSes} />
+        <Intro />
 
         {/* <---------- Projects -----------> */}
-        {openSes && (
-          <div className="card-container">
-            <div className="heading">Projects</div>
-            <div className="card-grid">
-              <Card className="card-ele" />
-            </div>
+
+        <div className="card-container">
+          <div className="heading">Projects</div>
+          <div className="card-grid">
+            <Card className="card-ele" />
           </div>
-        )}
+        </div>
 
         {/* <---------- Services/ Skills -----------> */}
-        {openSes && (
-          <div className="skills-container">
-            <div className="heading">Skills</div>
-            <div className="skills-grid"></div>
-          </div>
-        )}
+        <div className="skills-container">
+          <div className="heading">Skills</div>
+          <div className="skills-grid"></div>
+        </div>
 
         {/* <---------- Aboutme and Resume -----------> */}
 
         {/* <---------- Footer -----------> */}
-        {openSes && (
-          <div className="footer-holder">
-            <Footer />
-          </div>
-        )}
+        <div className="footer-holder">
+          <Footer />
+        </div>
       </div>
 
       <div className="cursor">
