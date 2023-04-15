@@ -1,12 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
 import Intro from "./components/Introduction/Intro";
 import Navbar from "./components/NavBar/Navbar";
 import secretAudio from "./assets/secret_sound_2.mp3";
+import Work from "./pages/Work/Work";
+import { projects } from "./store/Store";
 
 function App() {
+  const [pageActive, setPageActve] = useState(false);
+
   const mouseFollower = (cursor, trailer) => {
     window.onmousemove = (event) => {
       const x = event.clientX;
@@ -86,50 +90,68 @@ function App() {
       <div className="navbar">
         <Navbar />
       </div>
-      <div className="appContainer">
-        <audio className="secret-audio2 growmore" src={secretAudio} />
+      {!pageActive && (
+        <div className="appContainer">
+          <audio className="secret-audio2 growmore" src={secretAudio} />
 
-        <div className="content2">
-          {/* <---------- Introduction -----------> */}
-          <Intro />
+          <div className="content2">
+            {/* <---------- Introduction -----------> */}
+            <Intro />
 
-          {/* <---------- Projects -----------> */}
+            {/* <---------- Projects -----------> */}
 
-          <div className="card-container">
-            <div className="heading-holder">
-              <div className="heading">Projects</div>
-              <button className="see-more">See More</button>
+            <div className="card-container">
+              <div className="heading-holder">
+                <div className="heading">Projects</div>
+                <a
+                  className="see-more"
+                  href="https://github.com/Chethan30"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  See more
+                </a>
+              </div>
+              <div className="card-grid">
+                {projects.map((project, index) => {
+                  return (
+                    <Card
+                      className="card-ele"
+                      key={index}
+                      title={project.title}
+                      desc={project.minidesc}
+                    />
+                  );
+                })}
+              </div>
             </div>
-            <div className="card-grid">
-              <Card className="card-ele" />
-              <Card className="card-ele" />
-              <Card className="card-ele" />
-              <Card className="card-ele" />
-              <Card className="card-ele" />
-              <Card className="card-ele" />
+
+            {/* <---------- Services/ Skills -----------> */}
+            <div className="skills-container">
+              <div className="heading-holder">
+                <div className="heading">Skills</div>
+              </div>
+              <div className="skills-grid"></div>
+            </div>
+
+            {/* <---------- Aboutme and Resume -----------> */}
+            <div className="about-container">
+              <div className="heading">About</div>
             </div>
           </div>
-
-          {/* <---------- Services/ Skills -----------> */}
-          <div className="skills-container">
-            <div className="heading-holder">
-              <div className="heading">Skills</div>
-            </div>
-            <div className="skills-grid"></div>
-          </div>
-
-          {/* <---------- Aboutme and Resume -----------> */}
         </div>
+      )}
 
-        <div className="cursor">
-          <i className="cursor-icon">🚀</i>
-        </div>
-        <div className="trailer"></div>
-      </div>
+      {pageActive && <Work title={"Page Title"} key={0} />}
+
       {/* <---------- Footer -----------> */}
       <div className="footer-holder">
         <Footer />
       </div>
+      <div className="cursor">
+        <i className="cursor-icon">🚀</i>
+      </div>
+      <div className="trailer"></div>
     </div>
   );
 }

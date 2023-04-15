@@ -194,11 +194,17 @@
   padding: 1rem 2rem;
 }
 
+.about-container {
+  padding: 1rem 2rem;
+}
+
 .footer-holder {
   /* justify-self: flex-end; */
   width: 100%;
   bottom: 0;
 }
+
+/* Page Container */
 
 @media screen and (max-width: 426px) {
   .cursor,
