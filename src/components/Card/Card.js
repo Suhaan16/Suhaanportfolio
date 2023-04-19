@@ -9,9 +9,11 @@ export default function Card({
   techStack,
   projectInfo,
   openPage,
+  setActiveProj,
 }) {
   const openWork = () => {
     console.log("Clicked on" + title);
+    setActiveProj(projectInfo);
     openPage(true);
   };
   return (

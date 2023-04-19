@@ -10,6 +10,7 @@ import { projects } from "./store/Store";
 
 function App() {
   const [pageActive, setPageActve] = useState(false);
+  const [activeProj, setActiveProj] = useState({});
 
   const mouseFollower = (cursor, trailer) => {
     window.onmousemove = (event) => {
@@ -80,7 +81,7 @@ function App() {
         trailer.classList.remove("growmore");
       });
     });
-  }, []);
+  }, [pageActive]);
 
   // const openOld = () => {
   //   window.open(
@@ -128,6 +129,7 @@ function App() {
                       techStack={project.tech}
                       projectInfo={project}
                       openPage={setPageActve}
+                      setActiveProj={setActiveProj}
                     />
                   );
                 })}
@@ -150,7 +152,14 @@ function App() {
         </div>
       )}
 
-      {pageActive && <Work title={"Page Title"} key={0} />}
+      {pageActive && (
+        <Work
+          title={"Page Title"}
+          key={0}
+          openPage={setPageActve}
+          activeProj={activeProj}
+        />
+      )}
 
       {/* <---------- Footer -----------> */}
       <div className="footer-holder">
