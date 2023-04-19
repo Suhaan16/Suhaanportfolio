@@ -1,16 +1,16 @@
 export const projects = [
   {
     key: 0,
-    title: "Projet Title",
+    title: "Project Title",
     description: "desc",
     minidesc: "dsfdsfsdg",
     pictures: ["link1", "link2"],
-    tech: ["react", "python", "html"],
+    tech: ["React", "Python", "Html"],
     links: ["link1", "link2"],
   },
   {
     key: 1,
-    title: "Projet Title1",
+    title: "Project Title 1",
     description: "desc",
     minidesc: "dsfdsfsdg",
     pictures: ["link1", "link2"],
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     key: 2,
-    title: "Projet Title2",
+    title: "Project Title 2",
     description: "desc",
     minidesc: "dsfdsfsdgdf",
     pictures: ["link1", "link2"],
@@ -28,16 +28,16 @@ export const projects = [
   },
   {
     key: 3,
-    title: "Projet Title3",
+    title: "Project Title 3",
     description: "desc",
     minidesc: "dsfdsfsdg erer ert",
     pictures: ["link1", "link2"],
-    tech: ["react", "python", "html"],
+    tech: ["react", "python", "css"],
     links: ["link1", "link2"],
   },
   {
     key: 4,
-    title: "Projet Title4",
+    title: "Project Title 4",
     description: "desc",
     minidesc: "dsfdsfsdg erer erer",
     pictures: ["link1", "link2"],
@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     key: 5,
-    title: "Projet Title5",
+    title: "Project Title 5",
     description: "desc",
     minidesc: "dsfdsfsdg erefr erwer ",
     pictures: ["link1", "link2"],

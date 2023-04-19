@@ -1,27 +1,27 @@
 import React from "react";
 import "./Card.css";
+import TechHolder from "./TechHolder";
 
-export default function Card({ title, desc }) {
+export default function Card({
+  itemId,
+  title,
+  desc,
+  techStack,
+  projectInfo,
+  openPage,
+}) {
+  const openWork = () => {
+    console.log("Clicked on" + title);
+    openPage(true);
+  };
   return (
-    <div className="card">
+    <div className="card" onClick={openWork}>
       <div className="card-content">
         <h1 className="projName">{title}</h1>
         <div className="tech-used">
-          <div className="tech">
-            <div className="tech-heading">Tech</div>
-          </div>
-          <div className="tech">
-            <div className="tech-heading">Tech</div>
-          </div>
-          <div className="tech">
-            <div className="tech-heading">Tech</div>
-          </div>
-          <div className="tech">
-            <div className="tech-heading">Tech</div>
-          </div>
-          <div className="tech">
-            <div className="tech-heading">Tech</div>
-          </div>
+          {techStack.map((tech, index) => {
+            return <TechHolder tech={tech} key={index} />;
+          })}
         </div>
         <div className="proj-desc">{desc}</div>
       </div>

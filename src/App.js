@@ -75,6 +75,10 @@ function App() {
         cursor.classList.remove("point");
         trailer.classList.remove("growmore");
       });
+      card.addEventListener("click", () => {
+        cursor.classList.remove("point");
+        trailer.classList.remove("growmore");
+      });
     });
   }, []);
 
@@ -118,8 +122,12 @@ function App() {
                     <Card
                       className="card-ele"
                       key={index}
+                      itemId={project.key}
                       title={project.title}
                       desc={project.minidesc}
+                      techStack={project.tech}
+                      projectInfo={project}
+                      openPage={setPageActve}
                     />
                   );
                 })}
