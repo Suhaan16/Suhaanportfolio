@@ -42,7 +42,7 @@
 
 .sec {
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   cursor: none;
   margin: 0 1rem;
   transition: ease-in-out 300ms;
