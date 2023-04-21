@@ -125,6 +125,12 @@
   transform-origin: bottom left;
 }
 
+.linkhover:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+  transition: ease-in-out 300ms;
+}
+
 .welcome {
   display: flex;
   white-space: nowrap;

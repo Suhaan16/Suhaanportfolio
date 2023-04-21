@@ -109,7 +109,7 @@ function App() {
               <div className="heading-holder">
                 <div className="heading">Projects</div>
                 <a
-                  className="see-more"
+                  className="see-more link linkhover"
                   href="https://github.com/Chethan30"
                   target="_blank"
                   rel="noreferrer"

@@ -17,7 +17,7 @@ function Work({ openPage, activeProj }) {
   return (
     <div className="pageContainer">
       <div className="page-heading">
-        <div className="back-button" onClick={closePage}>
+        <div className="back-button linkhover" onClick={closePage}>
           <img src={backButton} alt="" />
         </div>
         <div className="page-title">{activeProj.title}</div>
