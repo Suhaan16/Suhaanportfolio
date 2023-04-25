@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import "./Work.css";
 import backButton from "../../assets/backButton.png";
 import TechHolder from "../../components/Card/TechHolder";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 function Work({ openPage, activeProj }) {
   useEffect(() => {
@@ -25,11 +29,18 @@ function Work({ openPage, activeProj }) {
       </div>
 
       <div className="page-content">
-        <div className="page-pictures">Pictures using swiper js</div>
         <div className="tech-used">
           {activeProj.tech.map((tech, index) => {
             return <TechHolder tech={tech} key={index} />;
           })}
+        </div>
+        <div className="page-pictures">
+          <Swiper navigation={true} modules={[Navigation]} className="swiper">
+            <SwiperSlide className="swiper-slide">Slide 1</SwiperSlide>
+            <SwiperSlide className="swiper-slide">Slide 2</SwiperSlide>
+            <SwiperSlide className="swiper-slide">Slide 3</SwiperSlide>
+            <SwiperSlide className="swiper-slide">Slide 4</SwiperSlide>
+          </Swiper>
         </div>
 
         <div className="page-desc">{activeProj.description}</div>
