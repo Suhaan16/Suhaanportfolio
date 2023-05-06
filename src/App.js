@@ -105,7 +105,7 @@ function App() {
 
             {/* <---------- Projects -----------> */}
 
-            <div className="card-container">
+            <div className="card-container" id="projects">
               <div className="heading-holder">
                 <div className="heading">Projects</div>
                 <a
@@ -137,7 +137,7 @@ function App() {
             </div>
 
             {/* <---------- Services/ Skills -----------> */}
-            <div className="skills-container">
+            <div className="skills-container" id="stack">
               <div className="heading-holder">
                 <div className="heading">Skills</div>
               </div>
@@ -145,7 +145,7 @@ function App() {
             </div>
 
             {/* <---------- Aboutme and Resume -----------> */}
-            <div className="about-container">
+            <div className="about-container" id="about">
               <div className="heading">About</div>
             </div>
           </div>
