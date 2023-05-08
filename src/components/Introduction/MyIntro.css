@@ -35,3 +35,20 @@
     background-position: -200% center;
   }
 }
+
+.fancyButton {
+  /* background-color: #ff930f; */
+  background: linear-gradient(to right, #ff930f, #fff95b, #fffc9f, #ff930f);
+  background-size: 300%;
+  animation: background-pan 3s linear infinite;
+
+  padding: 10px;
+  border-radius: 10px;
+  border-width: 0px;
+
+  transition: 300ms ease-in-out transform;
+}
+
+.fancyButton:hover {
+  transform: scale(1.1);
+}
