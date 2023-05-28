@@ -85,3 +85,21 @@
   object-fit: contain;
   word-wrap: normal;
 }
+
+@media screen and (max-width: 426px) {
+  .card {
+    min-width: 70vw;
+    aspect-ratio: 16/9;
+  }
+
+  .card-content {
+    padding: 0 0;
+    width: 100%;
+  }
+
+  .proj-desc {
+    display: none;
+    visibility: hidden;
+  }
+  
+}
