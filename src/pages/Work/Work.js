@@ -9,10 +9,10 @@ import "swiper/css/navigation";
 
 function Work({ openPage, activeProj }) {
   useEffect(() => {
-    console.log(activeProj);
+    // console.log(activeProj);
   }, []);
 
-  const bttonLink = "https://icons8.com/icon/99287/back-arrow";
+  // const bttonLink = "https://icons8.com/icon/99287/back-arrow";
 
   const closePage = () => {
     openPage(false);

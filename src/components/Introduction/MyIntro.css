@@ -11,7 +11,7 @@
   text-align: center;
   color: white;
   font-size: clamp(2em, 2vw, 4em);
-  font-weight: 800;
+  font-weight: 500;
   margin: 0px;
   padding: 20px;
 }
@@ -19,6 +19,7 @@
 .magic {
   background: linear-gradient(to right, #ff930f, #fff95b, #fffc9f, #ff930f);
   -webkit-background-clip: text;
+  /* background-clip: text; */
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
 
