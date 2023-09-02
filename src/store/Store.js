@@ -6,7 +6,7 @@ export const projects = [
     minidesc: "Searching for a place to stay? Dwelio is here to help! -- Currently under development",
     // pictures: ["link1", "link2"],
     tech: ["ReactJS", "HTML", "CSS", "NodeJS", "PostgreSQL", "Express"],
-    links: ["link1", "link2"],
+    // links: ["link1", "link2"],
   },
   {
     key: 1,

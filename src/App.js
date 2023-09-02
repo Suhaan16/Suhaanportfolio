@@ -7,6 +7,7 @@ import Navbar from "./components/NavBar/Navbar";
 import secretAudio from "./assets/secret_sound_2.mp3";
 import Work from "./pages/Work/Work";
 import { projects } from "./store/Store";
+import About from "./components/About/About";
 
 function App() {
   const [pageActive, setPageActve] = useState(false);
@@ -103,8 +104,21 @@ function App() {
             {/* <---------- Introduction -----------> */}
             <Intro />
 
-            {/* <---------- Projects -----------> */}
+            {/* <---------- Aboutme and Resume -----------> */}
+            <div className="about-container" id="about">
+              <div className="heading">About</div>
+              <About/>
+            </div>
 
+            {/* <---------- Services/ Skills -----------> */}
+            <div className="skills-container" id="stack">
+              <div className="heading-holder">
+                <div className="heading">Skills</div>
+              </div>
+              <div className="skills-grid"></div>
+            </div>
+
+            {/* <---------- Projects -----------> */}
             <div className="card-container" id="projects">
               <div className="heading-holder">
                 <div className="heading">Projects</div>
@@ -136,18 +150,6 @@ function App() {
               </div>
             </div>
 
-            {/* <---------- Services/ Skills -----------> */}
-            <div className="skills-container" id="stack">
-              <div className="heading-holder">
-                <div className="heading">Skills</div>
-              </div>
-              <div className="skills-grid"></div>
-            </div>
-
-            {/* <---------- Aboutme and Resume -----------> */}
-            <div className="about-container" id="about">
-              <div className="heading">About</div>
-            </div>
           </div>
         </div>
       )}

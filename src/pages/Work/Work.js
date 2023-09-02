@@ -25,7 +25,7 @@ function Work({ openPage, activeProj }) {
           <img src={backButton} alt="" />
         </div>
         <div className="page-title">{activeProj.title}</div>
-        <div className="page-links">Links to project here</div>
+        { activeProj.links && <div className="page-links">Links to project here</div>}
       </div>
 
       <div className="page-content">
@@ -36,10 +36,9 @@ function Work({ openPage, activeProj }) {
         </div>
         { activeProj.pictures && <div className="page-pictures">
           <Swiper navigation={true} modules={[Navigation]} className="swiper">
-            <SwiperSlide className="swiper-slide">Slide 1</SwiperSlide>
-            <SwiperSlide className="swiper-slide">Slide 2</SwiperSlide>
-            <SwiperSlide className="swiper-slide">Slide 3</SwiperSlide>
-            <SwiperSlide className="swiper-slide">Slide 4</SwiperSlide>
+            { activeProj.pictures.map((picture, index) => {
+              return <SwiperSlide className="swiper-slide">{picture}</SwiperSlide>
+            })}
           </Swiper>
         </div>}
         

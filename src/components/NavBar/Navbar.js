@@ -14,14 +14,17 @@ export default function Navbar() {
         />
       </div>
       <div className="nav-links">
-        <a className="sec link" href="#projects" rel="noopener noreferrer">
-          Projects
-        </a>
-        <a className="sec link" href="#stack" rel="noopener noreferrer">
-          Stack
-        </a>
         <a className="sec link" href="#about" rel="noopener noreferrer">
           About
+        </a>
+        <a className="sec link" href="#skills" rel="noopener noreferrer">
+          Skills
+        </a>
+        <a className="sec link" href="#work" rel="noopener noreferrer">
+          Work
+        </a>
+        <a className="sec link" href="#projects" rel="noopener noreferrer">
+          Projects
         </a>
         <a className="sec link" href="#contact" rel="noopener noreferrer">
           Contact
