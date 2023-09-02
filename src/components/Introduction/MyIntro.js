@@ -10,12 +10,12 @@ function MyIntro() {
   return (
     <div className="myinrto-container">
       <h1 className="myintro-text">
-        Hey, I'm <span className="magic">Chethan</span>!
+        Hey, I'm <span className="magic">Chethan Birur Nataraja</span>!
       </h1>
-      <h3>A cutting-edge software engineer currently at <a href="https://www.veryableops.com/">Veryable Inc.</a>, passionately delving into the realms of scalability, cloud infrastructure, streamlined pipelines, and agile configurations.</h3>
-      <button className="fancyButton" onClick={openResumeHandler}>
+      {/* <h3>A cutting-edge software engineer currently at <a href="https://www.veryableops.com/">Veryable Inc.</a>, passionately delving into the realms of scalability, cloud infrastructure, streamlined pipelines, and agile configurations.</h3> */}
+      {/* <button className="fancyButton" onClick={openResumeHandler}>
         Checkout my resume here
-      </button>
+      </button> */}
     </div>
   );
 }

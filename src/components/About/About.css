@@ -1,0 +1,30 @@
+.about-content {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.about-me-pic {
+    width: 50%;
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-desc {
+    width: 50%;
+    flex: 0.5;
+    white-space: pre-line;
+}
+
+.pic-circle {
+    width: 35%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.pic-circle > img {
+    object-fit: contain;
+}
