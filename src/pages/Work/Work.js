@@ -34,14 +34,15 @@ function Work({ openPage, activeProj }) {
             return <TechHolder tech={tech} key={index} />;
           })}
         </div>
-        <div className="page-pictures">
+        { activeProj.pictures && <div className="page-pictures">
           <Swiper navigation={true} modules={[Navigation]} className="swiper">
             <SwiperSlide className="swiper-slide">Slide 1</SwiperSlide>
             <SwiperSlide className="swiper-slide">Slide 2</SwiperSlide>
             <SwiperSlide className="swiper-slide">Slide 3</SwiperSlide>
             <SwiperSlide className="swiper-slide">Slide 4</SwiperSlide>
           </Swiper>
-        </div>
+        </div>}
+        
 
         <div className="page-desc">{activeProj.description}</div>
       </div>
