@@ -8,6 +8,10 @@ import secretAudio from "./assets/secret_sound_2.mp3";
 import Work from "./pages/Work/Work";
 import { projects } from "./store/Store";
 import About from "./components/About/About";
+import SkillCardFrontend from "./components/Card/SkillCardFrontend";
+import SkillCardBackend from "./components/Card/SkillCardBackend";
+import SkillCardDevops from "./components/Card/SkillCardDevops";
+import ExpTimeline from "./components/Experience/ExpTimeline";
 
 function App() {
   const [pageActive, setPageActve] = useState(false);
@@ -105,31 +109,21 @@ function App() {
             <Intro />
 
             {/* <---------- Aboutme and Resume -----------> */}
-            <div className="about-container" id="about">
-              <div className="heading">About</div>
-              <About/>
+            <div className="about-container">
+              {/* <div className="heading">About</div> */}
+              {/* <About /> */}
             </div>
 
-            {/* <---------- Services/ Skills -----------> */}
-            <div className="skills-container" id="stack">
-              <div className="heading-holder">
-                <div className="heading">Skills</div>
-              </div>
-              <div className="skills-grid"></div>
+            {/* <---------- Experience -----------> */}
+            <div className="experience-container" id="experience">
+              <div className="heading">Experience</div>
+              <ExpTimeline />
             </div>
 
             {/* <---------- Projects -----------> */}
             <div className="card-container" id="projects">
               <div className="heading-holder">
                 <div className="heading">Projects</div>
-                <a
-                  className="see-more link linkhover"
-                  href="https://github.com/Chethan30"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  See more
-                </a>
               </div>
               <div className="card-grid">
                 {projects.map((project, index) => {
@@ -148,8 +142,28 @@ function App() {
                   );
                 })}
               </div>
+              <div className="heading-holder">
+                <a
+                  className="see-more link linkhover"
+                  href="https://github.com/Chethan30"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  See more
+                </a>
+              </div>
             </div>
-
+            {/* <---------- Services/ Skills -----------> */}
+            <div className="skills-container" id="skills">
+              <div className="heading-holder">
+                <div className="heading">Skills</div>
+              </div>
+              <div className="skills-grid">
+                <SkillCardFrontend />
+                <SkillCardDevops />
+                <SkillCardBackend />
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -165,7 +179,7 @@ function App() {
 
       {/* <---------- Footer -----------> */}
       <div className="footer-holder">
-        <Footer />
+        <Footer showNav={pageActive} />
       </div>
       <div className="cursor">
         <i className="cursor-icon">🚀</i>

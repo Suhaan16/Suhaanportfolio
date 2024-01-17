@@ -1,15 +1,15 @@
 .footer {
-  background-color: rgb(30, 30, 30);
+  /* background-color: rgb(30, 30, 30); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  position: fixed;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 999;
+  bottom: 0; */
+  /* width: 100%; */
+  /* z-index: 999; */
 
   padding: 2em 3em;
 }
@@ -27,6 +27,53 @@
   animation: blink 1s linear infinite;
 }
 
+.nav-again {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: grey;
+
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.nav-again a {
+  color: grey;
+  text-decoration: none;
+}
+
+.nav-again a:hover {
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.social-handles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+.social-handles a {
+  color: grey;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+.social-handles a:hover {
+  color: white;
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: ease-in-out 300ms;
+}
+
 @keyframes blink {
   0% {
     opacity: 0;
@@ -37,5 +84,23 @@
   100% {
     opacity: 1;
     text-shadow: 0 0 0 red;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .footer {
+    padding: 1em 1.5em;
+  }
+
+  .nav-again {
+    font-size: 0.8rem;
+  }
+
+  .social-handles {
+    gap: 1.5rem;
+  }
+
+  .copywrite {
+    font-size: 0.6rem;
   }
 }

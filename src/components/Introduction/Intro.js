@@ -7,7 +7,7 @@ export default function Intro() {
   // const [openSes, setOpenSes] = useState(false);
 
   return (
-    <section className="intro-container">
+    <section className="intro-container" id="about">
       <audio className="secret-audio" src={secretAudio} />
 
       <div className="intro-left">

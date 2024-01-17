@@ -1,19 +1,27 @@
 .myinrto-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 
   padding: 1rem;
 }
 
 .myintro-text {
-  text-align: center;
+  text-align: left;
   color: white;
   font-size: clamp(2em, 2vw, 4em);
   font-weight: 500;
   margin: 0px;
   padding: 20px;
+}
+
+.myintro-sub {
+  font-size: clamp(1.5em, 1vw, 2em);
+}
+
+.myintro-con {
+  font-size: clamp(0.5em, 1vw, 2em);
 }
 
 .magic {
@@ -22,6 +30,20 @@
   /* background-clip: text; */
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+  font-weight: bold;
+
+  /* animation */
+  background-size: 300%;
+  animation: background-pan 3s linear infinite;
+}
+
+.magic-blue {
+  background: linear-gradient(to right, #0f6bff, #5bcbff, #9ff7ff, #0f63ff);
+  -webkit-background-clip: text;
+  /* background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-weight: bold;
 
   /* animation */
   background-size: 300%;
@@ -39,15 +61,24 @@
 
 .fancyButton {
   /* background-color: #ff930f; */
-  background: linear-gradient(to right, #ff930f, #fff95b, #fffc9f, #ff930f);
+  /* background: linear-gradient(to right, #ff930f, #fff95b, #fffc9f, #ff930f);
   background-size: 300%;
-  animation: background-pan 3s linear infinite;
+  animation: background-pan 3s linear infinite; */
 
-  padding: 10px;
-  border-radius: 10px;
-  border-width: 0px;
+  background-color: black;
+  border: 1px solid #fff95b;
+
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  /* border-width: 0px; */
 
   transition: 300ms ease-in-out transform;
+
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: fit-content;
+  color: grey;
+  font-weight: bold;
 }
 
 .pc-extra {
@@ -71,10 +102,20 @@
   .myinrto-container {
     width: 80vw;
     padding: 0 0;
+    align-items: center;
   }
 
   .myintro-text {
     padding: 0 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .myintro-con {
+    font-size: 15px;
+    padding-top: 2rem;
+    justify-content: left;
+    font-weight: 300 !important;
   }
 
   .myinrto-container > h3 {

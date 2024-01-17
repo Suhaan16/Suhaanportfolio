@@ -56,6 +56,7 @@
 @media screen and (max-width: 768px) {
   .nav-container {
     justify-content: center;
+    width: auto;
   }
   .nav-links {
     display: none;

@@ -1,0 +1,42 @@
+.vertical-timeline-element:hover > .vertical-timeline-element-content {
+  background-color: rgba(128, 128, 128, 0.454) !important;
+  transform: scale(1.05) !important;
+  transition: ease-in-out 0.3s !important;
+  border: 2px solid white !important;
+}
+
+.vertical-timeline-element:hover > .vertical-timeline-element-icon {
+  border: none !important;
+  scale: 1.2 !important;
+  color: rgba(255, 253, 162, 0.8) !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+.vertical-timeline-element:hover .vertical-timeline-element-title {
+  color: rgba(255, 253, 162, 0.8) !important;
+  transition: ease-in-out 0.3s !important;
+}
+
+.vertical-timeline-element-title {
+  margin-bottom: 1rem !important;
+}
+
+.vertical-timeline-element-subtitle {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 1rem !important;
+
+  font-weight: 400 !important;
+  font-size: small !important;
+}
+
+.content-icon {
+  color: grey !important;
+}
+
+.vertical-timeline-element-content > p {
+  font-size: small !important;
+  font-weight: 100 !important;
+}

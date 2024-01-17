@@ -20,8 +20,8 @@ export default function Navbar() {
         <a className="sec link" href="#skills" rel="noopener noreferrer">
           Skills
         </a>
-        <a className="sec link" href="#work" rel="noopener noreferrer">
-          Work
+        <a className="sec link" href="#experience" rel="noopener noreferrer">
+          Experience
         </a>
         <a className="sec link" href="#projects" rel="noopener noreferrer">
           Projects

@@ -92,17 +92,17 @@
 @media screen and (max-width: 426px) {
   .card {
     min-width: 70vw;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/15; */
   }
 
   .card-content {
     padding: 0 0;
-    width: 100%;
+    width: 90%;
   }
 
   .proj-desc {
-    display: none;
-    visibility: hidden;
+    /* display: none; */
+    /* visibility: hidden; */
+    font-size: 10px;
   }
-  
 }
