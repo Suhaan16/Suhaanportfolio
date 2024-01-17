@@ -7,7 +7,7 @@ import Navbar from "./components/NavBar/Navbar";
 import secretAudio from "./assets/secret_sound_2.mp3";
 import Work from "./pages/Work/Work";
 import { projects } from "./store/Store";
-import About from "./components/About/About";
+// import About from "./components/About/About";
 import SkillCardFrontend from "./components/Card/SkillCardFrontend";
 import SkillCardBackend from "./components/Card/SkillCardBackend";
 import SkillCardDevops from "./components/Card/SkillCardDevops";
@@ -98,7 +98,7 @@ function App() {
   return (
     <div className="App">
       <div className="navbar">
-        <Navbar />
+        <Navbar showLinks={pageActive} />
       </div>
       {!pageActive && (
         <div className="appContainer">

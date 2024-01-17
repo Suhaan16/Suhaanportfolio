@@ -47,7 +47,7 @@
 }
 
 .page-content {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 25px 20px;
 }
 
@@ -55,9 +55,21 @@
   width: 100%;
   height: 40vh;
 
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   align-items: center;
+
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
+  padding: 1rem 1rem !important;
+}
+
+.swiper-image {
+  object-fit: contain;
+  width: 50%;
+  scale: 1;
+  text-align: center;
+  align-self: center;
 }
 
 /* .swiper {
@@ -65,14 +77,14 @@
   height: 100%;
 } */
 
-/* .swiper-slide {
+.swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 
 /* .swiper-slide img {
   display: block;

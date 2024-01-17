@@ -25,7 +25,9 @@ function Work({ openPage, activeProj }) {
           <img src={backButton} alt="" />
         </div>
         <div className="page-title">{activeProj.title}</div>
-        { activeProj.links && <div className="page-links">Links to project here</div>}
+        {activeProj.links && (
+          <div className="page-links">Links to project here</div>
+        )}
       </div>
 
       <div className="page-content">
@@ -34,14 +36,19 @@ function Work({ openPage, activeProj }) {
             return <TechHolder tech={tech} key={index} />;
           })}
         </div>
-        { activeProj.pictures && <div className="page-pictures">
-          <Swiper navigation={true} modules={[Navigation]} className="swiper">
-            { activeProj.pictures.map((picture, index) => {
-              return <SwiperSlide className="swiper-slide">{picture}</SwiperSlide>
-            })}
-          </Swiper>
-        </div>}
-        
+        {activeProj.pictures && (
+          <div className="page-pictures">
+            <Swiper navigation={true} modules={[Navigation]} className="swiper">
+              {activeProj.pictures.map((picture, index) => {
+                return (
+                  <SwiperSlide className="swiper-slide">
+                    <img src={picture} alt="lol" className="swiper-image" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+        )}
 
         <div className="page-desc">{activeProj.description}</div>
       </div>

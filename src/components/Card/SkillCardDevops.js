@@ -22,6 +22,10 @@ function SkillCardDevops() {
           <div className="skill-name">Docker</div>
         </div>
         <div className="skill">
+          <SiKubernetes />
+          <div className="skill-name">Kubernetes</div>
+        </div>
+        <div className="skill">
           <FaLinux />
           <div className="skill-name">Linux</div>
         </div>

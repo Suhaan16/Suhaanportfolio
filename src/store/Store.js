@@ -1,31 +1,44 @@
+import gvr1 from "../assets/gvr_1.png";
+import gvr2 from "../assets/gvr_2.png";
+import gvr3 from "../assets/gvr_3.png";
+import gvr4 from "../assets/gvr_4.png";
+
+import dw1 from "../assets/dw_1.png";
+import dw2 from "../assets/dw_2.png";
+import dw3 from "../assets/dw_3.png";
+
 export const projects = [
   {
     key: 0,
     title: "Dwelio",
-    description: "A web application that allows users to search for apartments in the Dallas area. Users can filter by price, number of bedrooms, and number of bathrooms. Users can also save apartments to their favorites list and view them later.",
-    minidesc: "Searching for a place to stay? Dwelio is here to help! -- Currently under development",
-    // pictures: ["link1", "link2"],
+    description:
+      "A web application that allows users to search for apartments in the Dallas area. Users can filter by price, number of bedrooms, and number of bathrooms. Users can also save apartments to their favorites list and view them later.",
+    minidesc:
+      "Searching for a place to stay? Dwelio is here to help! -- Currently under development",
+    pictures: [dw1, dw2, dw3],
     tech: ["ReactJS", "HTML", "CSS", "NodeJS", "PostgreSQL", "Express"],
     // links: ["link1", "link2"],
   },
   {
     key: 1,
     title: "Great VR Cook Off",
-    description: "A virtual reality multiplayer game where the player is a chef in a kitchen. The player must cook and serve food in a timely manner by adhereing to the provided recipie. Play this game along with your friends to see who is the best chef!",
+    description:
+      "A virtual reality multiplayer game where the player is a chef in a kitchen. The player must cook and serve food in a timely manner by adhereing to the provided recipie. Play this game along with your friends to see who is the best chef!",
     minidesc: "A virtual reality multiplayer cook off game in a kitchen.",
-    pictures: ["link1", "link2"],
+    pictures: [gvr1, gvr2, gvr3, gvr4],
     tech: ["Unity", "C#"],
-    links: ["link1", "link2"],
+    //links: ["link1", "link2"],
   },
   {
     key: 2,
     title: "Placement Portal",
-    description: "A web applicaton designed to help scores of students to get hired b tech companies. The portal is a one stop solution, allowing students to register and apply for jobs, and departments to keep track of validated and up to date applications.",
+    description:
+      "A web applicaton designed to help scores of students to get hired by tech companies. The portal is a one stop solution, allowing students to register and apply for jobs, and departments to keep track of validated and up to date applications.",
     minidesc: "Get hired with Placement Portal!",
     pictures: ["link1", "link2"],
     tech: ["ReactJS", "Flask", "HTML", "Python", "CSS", "PostgreSQL"],
-    links: ["link1", "link2"],
-  }
+    //links: ["link1", "link2"],
+  },
 ];
 
 // {

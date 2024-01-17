@@ -21,7 +21,7 @@
 }
 
 .myintro-con {
-  font-size: clamp(0.5em, 1vw, 2em);
+  font-size: clamp(1em, 1vw, 2em);
 }
 
 .magic {
