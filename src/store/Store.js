@@ -35,7 +35,7 @@ export const projects = [
     description:
       "A web applicaton designed to help scores of students to get hired by tech companies. The portal is a one stop solution, allowing students to register and apply for jobs, and departments to keep track of validated and up to date applications.",
     minidesc: "Get hired with Placement Portal!",
-    pictures: ["link1", "link2"],
+    //pictures: ["link1", "link2"],
     tech: ["ReactJS", "Flask", "HTML", "Python", "CSS", "PostgreSQL"],
     //links: ["link1", "link2"],
   },
