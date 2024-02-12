@@ -4,7 +4,7 @@ import "./MyIntro.css";
 function MyIntro() {
   const openResumeHandler = () => {
     window.open(
-      "https://drive.google.com/file/d/1joZuaRM6V1pWxYdwqVEaDQty7DfTZaQI/view",
+      "https://drive.google.com/file/d/1n16er9agEKlUsO_5vNTdkUuqEroEpSB5/view?usp=sharing",
       "_blank"
     );
   };
