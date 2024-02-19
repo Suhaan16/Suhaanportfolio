@@ -23,9 +23,9 @@ export default function Footer({ showNav }) {
           <a className="link" href="#skills">
             Skills
           </a>
-          <a className="link" href="#contact">
+          {/* <a className="link" href="#contact">
             Contact
-          </a>
+          </a> */}
         </div>
       )}
 

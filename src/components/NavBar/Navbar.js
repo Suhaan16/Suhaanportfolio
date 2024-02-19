@@ -28,9 +28,9 @@ export default function Navbar({ showLinks }) {
           <a className="sec link" href="#projects" rel="noopener noreferrer">
             Projects
           </a>
-          <a className="sec link" href="#contact" rel="noopener noreferrer">
+          {/* <a className="sec link" href="#contact" rel="noopener noreferrer">
             Contact
-          </a>
+          </a> */}
         </div>
       )}
     </div>

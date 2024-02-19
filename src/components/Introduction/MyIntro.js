@@ -15,13 +15,14 @@ function MyIntro() {
         Hi, I am <span className="magic">Chethan Birur Nataraja</span>.
       </h1>
       <h3 className="myintro-text myintro-sub">
-        I am a <span className="magic-blue">Software</span>
+        Jack of all trades. Some of the cards i've previously dealt with
+        include, <span className="magic-blue">Software</span>
         {" , "}
-        <span className="magic-blue">Interface</span> and{" "}
-        <span className="magic-blue">Infrastructure</span> Engineer.
+        <span className="magic-blue">Interface</span>, and{" "}
+        <span className="magic-blue">Platform</span> Engineer.
       </h3>
       <p className=" myintro-text myintro-con">
-        I passionately delve into the realms of scalability, cloud
+        I passionately delve into the realms of simplicity, scalability, cloud
         infrastructure, streamlined pipelines, and agile configurations.
       </p>
       {/* <h3>A cutting-edge software engineer currently at <a href="https://www.veryableops.com/">Veryable Inc.</a>, passionately delving into the realms of scalability, cloud infrastructure, streamlined pipelines, and agile configurations.</h3> */}

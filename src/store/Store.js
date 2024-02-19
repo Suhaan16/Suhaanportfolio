@@ -14,7 +14,7 @@ export const projects = [
     description:
       "A web application that allows users to search for apartments in the Dallas area. Users can filter by price, number of bedrooms, and number of bathrooms. Users can also save apartments to their favorites list and view them later.",
     minidesc:
-      "Searching for a place to stay? Dwelio is here to help! -- Currently under development",
+      "User-friendly web platform that simplifies the house rental process.",
     pictures: [dw1, dw2, dw3],
     tech: ["ReactJS", "HTML", "CSS", "NodeJS", "PostgreSQL", "Express"],
     // links: ["link1", "link2"],
@@ -34,7 +34,8 @@ export const projects = [
     title: "Placement Portal",
     description:
       "A web applicaton designed to help scores of students to get hired by tech companies. The portal is a one stop solution, allowing students to register and apply for jobs, and departments to keep track of validated and up to date applications.",
-    minidesc: "Get hired with Placement Portal!",
+    minidesc:
+      "Web application for on-campus recruitment, eliminating redundant groups and forms. Get hired with Placement Portal!",
     //pictures: ["link1", "link2"],
     tech: ["ReactJS", "Flask", "HTML", "Python", "CSS", "PostgreSQL"],
     //links: ["link1", "link2"],
