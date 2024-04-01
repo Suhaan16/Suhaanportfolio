@@ -1,14 +1,20 @@
+.background-thingy {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
 .pageContainer {
   margin-top: 17vh;
-  /* margin-bottom: 2rem; */
-  width: 100%;
-
+  width: 75%;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid yellow; */
   max-width: 80%;
-  height: 100%;
-  /* border: 2px solid red; */
+  height: 75%;
 }
 
 .page-heading {
@@ -29,7 +35,6 @@
 .back-button {
   display: flex;
   align-items: center;
-  /* border: 2px solid green; */
 }
 
 .back-button > img {
@@ -72,11 +77,6 @@
   align-self: center;
 }
 
-/* .swiper {
-  width: 100%;
-  height: 100%;
-} */
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -86,9 +86,9 @@
   align-items: center;
 }
 
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
+@media screen and (max-width: 700px) {
+  .pageContainer {
+    width: 100%;
+    height: 100%;
+  }
+}
