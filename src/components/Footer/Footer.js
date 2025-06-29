@@ -30,28 +30,27 @@ export default function Footer({ showNav }) {
       )}
 
       <div className="social-handles">
-        <a href="https://github.com/Chethan30" className="link social">
+        <a href="https://github.com/Suhaan16" className="link social">
           <FaGithub />
         </a>
         <a
-          href="https://www.linkedin.com/in/chethanbn/"
+          href="https://www.linkedin.com/in/suhaan/"
           className="link social"
         >
           <FaLinkedin />
         </a>
-        <a href="https://leetcode.com/Chethan30/" className="link social">
+        <a href="https://leetcode.com/u/Suhaan_16/" className="link social">
           <SiLeetcode />{" "}
         </a>
-        <a href="mailto:cxb220002@utdallas.edu" className="link social">
+        <a href="mailto:suhaanym1601@gmail.com" className="link social">
           <MdEmail />
         </a>
-        <a href="https://twitter.com/chethanbn30" className="link social">
+        <a href="https://x.com/SuhaanYm" className="link social">
           <FaXTwitter />
         </a>
       </div>
       <div className="copywrite">
-        © Made with <span className="copyheart">❤️</span> by Chethan Birur
-        Nataraja
+        © Made with <span className="copyheart">❤️</span> by Suhaan Yagati Mat
       </div>
     </div>
   );

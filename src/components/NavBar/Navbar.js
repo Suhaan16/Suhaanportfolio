@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import logoWhite from "../../assets/chethan-logo-white.png";
+import logoWhite from "../../assets/Image.jpg";
 
 export default function Navbar({ showLinks }) {
   return (

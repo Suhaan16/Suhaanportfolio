@@ -12,6 +12,7 @@ import SkillCardFrontend from "./components/Card/SkillCardFrontend";
 import SkillCardBackend from "./components/Card/SkillCardBackend";
 import SkillCardDevops from "./components/Card/SkillCardDevops";
 import ExpTimeline from "./components/Experience/ExpTimeline";
+import SkillCardLibraries from "./components/Card/SkillCardLibraries";
 
 function App() {
   const [pageActive, setPageActve] = useState(false);
@@ -145,7 +146,7 @@ function App() {
               <div className="heading-holder">
                 <a
                   className="see-more link linkhover"
-                  href="https://github.com/Chethan30"
+                  href="https://github.com/Suhaan16"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -162,6 +163,7 @@ function App() {
                 <SkillCardFrontend />
                 <SkillCardDevops />
                 <SkillCardBackend />
+                <SkillCardLibraries />
               </div>
             </div>
           </div>

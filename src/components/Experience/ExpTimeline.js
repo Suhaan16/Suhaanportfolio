@@ -27,81 +27,105 @@ const ExpTimeline = () => {
   return (
     <div>
       <VerticalTimeline>
-        <VerticalTimelineElement
+      <VerticalTimelineElement
           className="vertical-timeline-element--work test"
           contentStyle={cardContentCtyle}
           contentArrowStyle={cardArrowStyle}
-          date="May 2023 - Jan 2024"
+          date="Jun 2025 - Present"
           dateClassName="what is this"
           iconStyle={iconStyle}
           icon={<SiAwsorganizations />}
         >
           <h3 className="vertical-timeline-element-title">Sofwatre Engineer</h3>
           <h4 className="vertical-timeline-element-subtitle">
-            <CgOrganisation className="content-icon" /> Veryable Inc{" "}
-            <MdLocationOn className="content-icon" /> Dallas, TX
+            <CgOrganisation className="content-icon" />Cortracker Inc{" "}
+            <MdLocationOn className="content-icon" /> Irving, TX
           </h4>
           <p>
-            Typescript, Python, AWS, Lambda, Docker, Kubernetes, Terraform,
-            Circle CI, Automation
+            React, Node.js, Java, Python, AWS, SQL, MongoDB, Javascrpt, Docker, Kubernetes, C
           </p>
-        </VerticalTimelineElement>
+          </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work test"
+          contentStyle={cardContentCtyle}
+          contentArrowStyle={cardArrowStyle}
+          date="Sep 2024 - Jun 2025"
+          dateClassName="what is this"
+          iconStyle={iconStyle}
+          icon={<SiAwsorganizations />}
+        >
+          <h3 className="vertical-timeline-element-title">Sofwatre Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            <CgOrganisation className="content-icon" /> Community Dreams Foundation{" "}
+            <MdLocationOn className="content-icon" /> Tampa, FL
+          </h4>
+          <p>
+            Typescript, Node.js, Python, AWS, Kafka, React, Java, Machine Learning
+          </p>
+          <p>
+
+          </p>
+          </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={cardContentCtyle}
           contentArrowStyle={cardArrowStyle}
-          date="Aug 2022 - May 2024"
+          date="Jan 2024 - May 2024"
           iconStyle={iconStyle}
           icon={<GrCertificate />}
         >
           <h3 className="vertical-timeline-element-title">
-            Masters of Science in AI/ML
+            Software Engineer Intern
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
             <CgOrganisation className="content-icon" />
-            University of Texas at Dallas
+            Info Data Worx {" "}
+            <MdLocationOn className="content-icon" /> Mckinney, TX
           </h4>
           <p>
-            Machine Learning, Deep Learning, LLM, Computer Vision, Natural
-            Language Processing, Data Analytics
+            Python, AWS, HTML, CSS, Java, Javascript, Flask, Django, React,
+            Lambda, Docker, Kubernetes, Machine Learning
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={cardContentCtyle}
           contentArrowStyle={cardArrowStyle}
-          date="Jul 2021 - Jan 2022"
+          date="May 2022 - July 2022"
           iconStyle={iconStyle}
           icon={<MdDeveloperBoard />}
         >
           <h3 className="vertical-timeline-element-title">
-            DevSecOps Engineer
+            Software Engineer
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
-            <CgOrganisation className="content-icon" /> Brane Enterprises{" "}
+            <CgOrganisation className="content-icon" /> Mobiezy Solutions{" "}
             <MdOutlineSettingsRemote className="content-icon" /> Bengaluru, IN
           </h4>
           <p>
-            Python Scripting, Pen Testing, Linux, Jenkins, ArgoCD, Nmap,
-            BurpSuite
+            Python, React, Javascript, HTML, CSS, Java, AWS,
+            Docker, Django, SpringBoot, ORM, Linux, Jenkins, ArgoCD, Nmap
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={cardContentCtyle}
           contentArrowStyle={cardArrowStyle}
-          date="May 2018 - Aug 2022"
+          date="Sep 2021 - Oct 2021"
           iconStyle={iconStyle}
           icon={<GrCertificate />}
         >
           <h3 className="vertical-timeline-element-title">
-            Bachelor of Engineering in Computer Science
+            Machine Learning Intern
           </h3>
           <h4 className="vertical-timeline-element-subtitle">
             <CgOrganisation className="content-icon" />
-            Dayananda Sagar College of Engineering
+            Verzeo{" "}
+            <MdOutlineSettingsRemote className="content-icon" /> Bengaluru, IN
           </h4>
-          <p>AI/ML, Web Engineer, Logic Design</p>
+          <p>
+          Python, AWS, Hugging Face, LLM, Backend development
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

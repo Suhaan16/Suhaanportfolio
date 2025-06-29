@@ -6,7 +6,6 @@ import { FaDocker } from "react-icons/fa";
 import { SiKubernetes } from "react-icons/si";
 import { SiCircleci } from "react-icons/si";
 import { FaLinux } from "react-icons/fa";
-import { SiYaml } from "react-icons/si";
 
 function SkillCardDevops() {
   return (
@@ -28,10 +27,6 @@ function SkillCardDevops() {
         <div className="skill">
           <FaLinux />
           <div className="skill-name">Linux</div>
-        </div>
-        <div className="skill">
-          <SiYaml />
-          <div className="skill-name">YAML</div>
         </div>
         <div className="skill">
           <SiCircleci />
